@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Flix</string>
+    <string name="search_hint">Minimum 3 characters required</string>
+    <string name="toolbar_title">Romantic Comedy</string>
+    <string name="no_result">No result matched!</string>
+    <string name="connection_error">No Internet Connection</string>
+    <string name="no_data">No data found!</string>
+
+</resources>

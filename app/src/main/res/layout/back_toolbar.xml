@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:paddingTop="@dimen/padding_20"
+        android:layout_height="@dimen/toolbar_height"
+        android:visibility="visible"
+        android:background="@drawable/nav_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/padding_10"
+        android:paddingLeft="@dimen/padding_6"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/back_icon_width"
+            android:padding="@dimen/padding_10"
+            android:background="@drawable/back"
+            android:layout_height="@dimen/back_icon_height">
+
+        </ImageView>
+
+        <TextView
+            android:text="@string/toolbar_title"
+            android:layout_toRightOf="@+id/back"
+            android:textColor="@color/white"
+            android:fontFamily="@font/titillium_web_regular"
+            android:textSize="@dimen/header_text_size"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/padding_10"
+            android:layout_height="wrap_content">
+
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_marginRight="@dimen/padding_6"
+            android:layout_width="@dimen/search_icon_width"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/search"
+            android:layout_height="@dimen/search_icon_height">
+
+        </ImageView>
+
+
+
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/search_toolbar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

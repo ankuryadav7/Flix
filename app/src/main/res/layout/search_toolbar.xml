@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:visibility="gone"
+        android:id="@+id/search_relative_layout"
+        android:layout_height="@dimen/search_toolbar_height">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/search_toolbar_height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="@dimen/padding_6"
+            android:layout_marginRight="@dimen/padding_6"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/search_edt"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:textColor="@color/white"
+                android:textSize="@dimen/search_edt_txt_size"
+                android:fontFamily="@font/titillium_web_regular"
+                android:hint="@string/search_hint"
+                android:textColorHint="@color/grey"
+                android:paddingBottom="@dimen/padding_10"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@+id/search_edt"
+                android:background="@android:color/white"/>
+
+            <ImageView
+                android:id="@+id/cross_icon"
+                android:layout_width="@dimen/cross_icon_width"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/search_cancel"
+                android:layout_height="@dimen/cross_icon_height">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

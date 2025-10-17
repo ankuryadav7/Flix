@@ -25,10 +25,25 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build with Gradle
-        run: ./gradlew :app:assembleDebug
+        run: ./gradlew build
 
-      - name: Upload APK Artifact
+      # Upload debug APKs
+      - name: Upload APK Debug
         uses: actions/upload-artifact@v4
         with:
-          name: app-release
-          path: app/build/outputs/apk/release/app-release.apk
+          name: apk-debug
+          path: app/build/outputs/apk/debug/
+
+      # Upload release APKs
+      - name: Upload APK Release
+        uses: actions/upload-artifact@v4
+        with:
+          name: apk-release
+          path: app/build/outputs/apk/release/
+
+      # Upload AAB release bundles
+      - name: Upload AAB Release
+        uses: actions/upload-artifact@v4
+        with:
+          name: aab-release
+          path: app/build/outputs/bundle/release/

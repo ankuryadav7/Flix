@@ -8,6 +8,7 @@ import com.app.flix.di.AppInjector
 class App : Application() {
     companion object {
         /** Need Single ApplicationClass context so static field leak is ignored */
+        /** Need Single ApplicationClass context so static field leak is ignored */
         @SuppressLint("StaticFieldLeak")
         private lateinit var mContext: Context
 

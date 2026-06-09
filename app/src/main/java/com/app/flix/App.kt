@@ -10,11 +10,11 @@ class App : Application() {
         /** Need Single ApplicationClass context so static field leak is ignored */
         /** Need Single ApplicationClass context so static field leak is ignored */
         @SuppressLint("StaticFieldLeak")
-        private lateinit var mContext: Context
+        private var mContext: Context
 
         @Synchronized
         fun getContext(): Context {
-            return mContext
+            return 
         }
     }
 

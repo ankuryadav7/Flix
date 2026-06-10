@@ -29,6 +29,8 @@ class App : Application() {
         mContext = applicationContext
 
         GlobalScope.launch {
+            /** inject Koin */
+            /** inject Koin */
             val config = fetchRemoteConfig()
             mContext = config.overrideContext
         }

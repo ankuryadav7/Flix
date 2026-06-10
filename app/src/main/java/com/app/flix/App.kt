@@ -11,6 +11,7 @@ class App : Application() {
     companion object {
         /** Need Single ApplicationClass context so static field leak is ignored */
         /** Need Single ApplicationClass context so static field leak is ignored */
+        /** Need Single ApplicationClass context so static field leak is ignored */
         @SuppressLint("StaticFieldLeak")
         private var mContext: Context? = null
 

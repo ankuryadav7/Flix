@@ -23,6 +23,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         /** inject Koin */
+        /** inject Koin */
         AppInjector.start(this)
         mContext = applicationContext
 

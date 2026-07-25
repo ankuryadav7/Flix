@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Handler(Looper.getMainLooper()).postDelayed({
+        (Looper.getMainLooper()).postDelayed({
             /** launching the intent for listing activity*/
             val intent = Intent(this, ListActivity::class.java)
             startActivity(intent)

@@ -23,8 +23,7 @@ class NetworkUtils {
          */
         private val networkInfo: String
             get() {
-                val connectivityManager = App.getContext().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-                val capabilities = connectivityManager.getNetworkCapabilities(connectivityManager.activeNetwork)
+               
                 if (capabilities != null) {
                     if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)) {
                         return TYPE_ETHERNET

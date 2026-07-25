@@ -9,9 +9,9 @@ class AppInjector {
         /**
          * Should be called from Application.onCreate()
          */
-        @JvmStatic
+        
         fun start(application: Application) = startKoin {
-            androidContext(application)
+            
             modules(listOf(viewModels, repositoryModule))
         }
     }
